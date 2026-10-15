@@ -2,8 +2,7 @@
 
 Organelle imaging, segmentation, network analysis and 3D visualization.
 
-Developed by Dan LI and Dong YANG (yangdong) · Dayong Jin’s ODT Group.
-yangdong contributes interface refinements, Studio integration, and user guide updates.
+Developed by Dan LI and Dong YANG · Dayong Jin’s ODT Group.
 
 ## Run the application
 
