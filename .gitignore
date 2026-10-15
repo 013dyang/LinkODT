@@ -16,7 +16,6 @@
 !/LinkODT/requirements*.txt
 !/LinkODT/environment.yml
 !/LinkODT/VERSION.txt
-!/LinkODT/README.md
 !/LinkODT/assets/
 !/LinkODT/backends/
 !/LinkODT/backend_sources/

@@ -98,6 +98,6 @@
 
 example 包含 HeLa 四通道 Z 图像、独立的线粒体／脂滴／溶酶体通道，以及对应掩膜和三维结果，没有时间轴。线粒体数据用于展示掩膜编辑与细胞器几何；实例和网络演示采用局部裁剪，便于查看结构。
 
-``demo_data/real_examples/`` 包含 ``HeLa_mito_ROI.tif`` 和对应的二值掩膜。先复制到可写的工作目录。在 **Instance segmentation** 载入 ``HeLa_mito_ROI_mask.tif``，点击 **Run selected**。随后查看 **Morphology table**，将生成的 ``processed_output`` 载入 **Network analysis**，或在 **Visualization** 打开 ``HeLa_mito_ROI_pcd_instance_physical.txt``。局部区域尺寸为 256×256×42，XY 起点为原图中的 (857, 507)。示例使用体素坐标；分析实验数据时需设置对应物理标定。
+若另外收到了真实数据示例，``demo_data/real_examples/`` 中包含 ``HeLa_mito_ROI.tif`` 和对应的二值掩膜。先复制到可写的工作目录。在 **Instance segmentation** 载入 ``HeLa_mito_ROI_mask.tif``，点击 **Run selected**。随后查看 **Morphology table**，将生成的 ``processed_output`` 载入 **Network analysis**，或在 **Visualization** 打开 ``HeLa_mito_ROI_pcd_instance_physical.txt``。局部区域尺寸为 256×256×42，XY 起点为原图中的 (857, 507)。示例使用体素坐标；分析实验数据时需设置对应物理标定。
 
 ``HeLa_4channel_ROI.tif`` 保留同一局部视野的四通道原始强度，用于预处理截图。手册没有重复打包完整四通道原图和完整线粒体图像。训练窗口仅展示配置，example 提供的模型文件未用于生成本轮截图的新预测。动态模块继续使用合成 DEMO 时间序列。
