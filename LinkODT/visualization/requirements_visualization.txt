@@ -1,0 +1,8 @@
+numpy
+vtk
+PySide6
+imageio
+imageio-ffmpeg
+tifffile
+Pillow
+llama-cpp-python

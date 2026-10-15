@@ -1,0 +1,17 @@
+{% extends "!page.html" %}
+
+{% block footer %}
+<div class="related-pages">
+  {% if next %}<a class="next-page" href="{{ next.link }}"><div class="page-info"><div class="context"><span>{% if guide_english %}Next{% else %}下一页{% endif %}</span></div><div class="title">{{ next.title }}</div></div><svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg></a>{% endif %}
+  {% if prev %}<a class="prev-page" href="{{ prev.link }}"><svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg><div class="page-info"><div class="context"><span>{% if guide_english %}Previous{% else %}上一页{% endif %}</span></div><div class="title">{{ prev.title }}</div></div></a>{% endif %}
+</div>
+<div class="bottom-of-page" id="guide-footer">
+  <div class="left-details">
+    <div>© 2026 {{ guide_authors }} · {% if guide_english %}Dayong Jin’s ODT Group. All rights reserved.{% else %}Dayong Jin’s ODT 团队。版权所有。{% endif %}</div>
+    <div class="guide-footer-meta">
+      <span>{% if guide_english %}LinkODT 3.2 documentation{% else %}LinkODT 3.2 使用说明{% endif %}</span>
+      <span aria-hidden="true"> · </span><a class="muted-link" href="{{ pathto('citing') }}">{% if guide_english %}Citation{% else %}引用说明{% endif %}</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

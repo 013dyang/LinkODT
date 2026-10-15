@@ -1,0 +1,7 @@
+.guide-language-button {display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;min-height:1.5rem;padding:.15rem .55rem;margin-right:.4rem;border:1px solid var(--color-background-border);border-radius:3px;color:var(--color-foreground-primary);background:var(--color-background-primary);font-size:.8rem;line-height:1.4;text-decoration:none;}
+.guide-language-button:hover {color:var(--color-brand-content);border-color:var(--color-brand-content);text-decoration:none;}
+.guide-language-button:focus-visible {outline:2px solid var(--color-brand-content);outline-offset:2px;}
+.guide-footer-meta {margin-top:.3rem;font-size:.75rem;}
+.sidebar-logo {width:80px;max-width:80px;height:80px;object-fit:contain;display:block;margin:.75rem auto .25rem;}
+@media (max-width:63em) {#language-switch-desktop {display:none;} .mobile-header .guide-language-button {align-self:center;}}
+@media print {.sidebar-drawer,.toc-drawer,.header,.related-pages,.guide-language-button {display:none!important;} .main,.content {width:100%;margin:0;} figure,table {break-inside:avoid;} h1,h2,h3 {break-after:avoid;}}

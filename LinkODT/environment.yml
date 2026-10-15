@@ -1,0 +1,35 @@
+name: linkodt
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - pillow
+  - matplotlib
+  - networkx
+  - scikit-image
+  - scikit-learn
+  - pip:
+      - tifffile
+      - opencv-python
+      - open3d
+      - pyvista
+      - pyvistaqt
+      - vtk
+      - PySide6
+      - umap-learn
+      - omegaconf
+      - torchmetrics
+      - fvcore
+      - iopath
+      - einops
+      - timm
+      - submitit
+
+# Install a CUDA-enabled torch + torchvision separately according to the
+# target GPU/CUDA setup. The user's existing pytorch_gpu environment is
+# preferable when already working.

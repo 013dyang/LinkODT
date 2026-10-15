@@ -1,0 +1,4 @@
+# Optional dependencies used only by the SegFormer-B2 external baseline
+transformers>=4.45
+huggingface_hub>=0.24
+safetensors>=0.4

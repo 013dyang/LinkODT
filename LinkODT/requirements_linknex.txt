@@ -1,0 +1,35 @@
+# Install PyTorch + torchvision separately for the CUDA version matching
+# your machine. Do not let this file downgrade an existing working GPU build.
+
+numpy
+scipy
+pandas
+tifffile
+Pillow
+opencv-python
+scikit-image
+scikit-learn
+matplotlib
+networkx
+open3d
+pyvista
+pyvistaqt
+vtk
+PySide6
+umap-learn
+
+# DINOv2 local-source dependencies used by LinkNex
+omegaconf
+torchmetrics
+fvcore
+iopath
+einops
+timm
+submitit
+
+# Windows EXE build only
+pyinstaller
+pyinstaller-hooks-contrib
+imageio
+imageio-ffmpeg
+tqdm

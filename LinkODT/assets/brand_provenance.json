@@ -1,0 +1,6 @@
+{
+  "product": "LinkODT",
+  "artwork": "Original approved circular organelle artwork retained",
+  "wordmark": "LinkODT; Segoe UI semibold; theme-specific foreground",
+  "generator": "tools/render_brand.py"
+}

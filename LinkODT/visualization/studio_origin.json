@@ -1,0 +1,23 @@
+{
+  "visualization_app": {
+    "compiled_module": "_studio_core.pyc",
+    "original_code_sha256": "593e1bb03cc1b44ffe3cae7220b59033e8f0a8eb758da431a9d7324938465bcd",
+    "integrated_file_sha256": "51905d74c51616d176f28d6f4c71446a7df34dc6bd9cbd6a0001cb998f8b5548"
+  },
+  "io_utils": {
+    "compiled_module": "_studio_io.pyc",
+    "original_code_sha256": "e65eb567056b9657c4ae39a118c34178fac3a79a2b1a1151195983e8a6110783",
+    "integrated_file_sha256": "347325a33d1dcf4bc7696dca7e7858744c9bb4e211e4d18153224720260d8349"
+  },
+  "director": {
+    "compiled_module": "_studio_director.pyc",
+    "original_code_sha256": "21defd71a248df714cd40897fe5297e2426b69e7a807d32c6d50359b6dfbdd6b",
+    "integrated_file_sha256": "107f46e83a809363c5de048442478c56869778cc0f4ca341bbe875dd26f8d39a"
+  },
+  "source": {
+    "exe_sha256": "7df4354d034d9f493b4e185049b848f42cbf039fd3dee278976262689777b1dc",
+    "date": "2026-09-22",
+    "runtime": "CPython 3.11",
+    "note": "Original executable supplied by Dan LI. Only Studio modules retained; UI adapter uses shared LinkODT style."
+  }
+}
