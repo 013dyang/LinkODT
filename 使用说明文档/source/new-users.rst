@@ -45,12 +45,12 @@
 先用此示例熟悉载入、实例结果检查和三维浏览，再准备分割模型。本节使用标为 DEMO 的合成数据。
 
 1. 将手册目录中的 ``demo_data/`` 复制到可写的工作目录，保持 ``DEMO_static.tif``、``DEMO_static_mask.tif`` 与 ``processed_output/`` 的相对位置。
-2. 打开 **Instance segmentation**，载入 ``DEMO_static_mask.tif``。可直接检查已有输出；练习计算时，在工作副本中点击 **Run selected**。
-3. 对比 **Physical** 与 **Social** 视图，打开 **Morphology table**。随附示例在两种表示下各有五个实例，对应形态 CSV 各有五行数据、39 列。
+2. 打开 **Instance segmentation**，载入 ``DEMO_static_mask.tif``，点击 **Run selected**，在工作副本中生成实例结果。
+3. 对比 **Physical** 与 **Social** 视图，打开 **Morphology table** 查看计算得到的测量值。
 4. 打开 **Visualization**，载入 ``processed_output/DEMO_static.obj``，适配视野并旋转样本。随附表面有 6,062 个点和 12,104 个网格单元。
 5. 按 :doc:`outputs` 检查保存文件。确认载入与结果查看正常后，再处理自己的代表性样本。
 
-这些数量便于识别随附示例。修改掩膜或算法可能改变结果。
+分析表格和点云将在运行示例时生成。
 
 第一次完成静态分析
 ------------------
@@ -98,6 +98,6 @@
 
 example 包含 HeLa 四通道 Z 图像、独立的线粒体／脂滴／溶酶体通道，以及对应掩膜和三维结果，没有时间轴。线粒体数据用于展示掩膜编辑与细胞器几何；实例和网络演示采用局部裁剪，便于查看结构。
 
-``demo_data/real_examples/`` 包含 ``HeLa_mito_ROI.tif``、已有的二值掩膜，以及当前后端重新计算的结果。先复制到可写的工作目录。在 **Instance segmentation** 载入 ``HeLa_mito_ROI_mask.tif``，查看 **Morphology table**，将其 ``processed_output`` 载入 **Network analysis**，或在 **Visualization** 打开 ``HeLa_mito_ROI_pcd_instance_physical.txt``。局部区域尺寸为 256×256×42，XY 起点为原图中的 (857, 507)。示例使用体素坐标；分析实验数据时需设置对应物理标定。
+``demo_data/real_examples/`` 包含 ``HeLa_mito_ROI.tif`` 和对应的二值掩膜。先复制到可写的工作目录。在 **Instance segmentation** 载入 ``HeLa_mito_ROI_mask.tif``，点击 **Run selected**。随后查看 **Morphology table**，将生成的 ``processed_output`` 载入 **Network analysis**，或在 **Visualization** 打开 ``HeLa_mito_ROI_pcd_instance_physical.txt``。局部区域尺寸为 256×256×42，XY 起点为原图中的 (857, 507)。示例使用体素坐标；分析实验数据时需设置对应物理标定。
 
 ``HeLa_4channel_ROI.tif`` 保留同一局部视野的四通道原始强度，用于预处理截图。手册没有重复打包完整四通道原图和完整线粒体图像。训练窗口仅展示配置，example 提供的模型文件未用于生成本轮截图的新预测。动态模块继续使用合成 DEMO 时间序列。

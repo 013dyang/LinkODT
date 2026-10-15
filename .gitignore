@@ -37,6 +37,8 @@
 !/使用说明文档/index.html
 !/使用说明文档/demo_data/
 /使用说明文档/demo_data/real_examples/
+/使用说明文档/demo_data/processed_output/*
+!/使用说明文档/demo_data/processed_output/DEMO_static.obj
 
 **/__pycache__/
 **/.doctrees/

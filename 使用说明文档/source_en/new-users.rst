@@ -45,12 +45,12 @@ Worked example without model weights
 Use this example to learn loading, instance-result inspection, and three-dimensional viewing before preparing a segmentation model. This section uses the synthetic files marked DEMO.
 
 1. Copy ``demo_data/`` from this manual's folder to a writable working directory. Keep ``DEMO_static.tif``, ``DEMO_static_mask.tif``, and ``processed_output/`` together.
-2. Open **Instance segmentation** and load ``DEMO_static_mask.tif``. Existing outputs can be inspected directly. To practise calculation, use **Run selected** in the working copy.
-3. Compare the **Physical** and **Social** views and open **Morphology table**. The supplied example contains five instances in each representation; each corresponding morphology CSV has five data rows and 39 columns.
+2. Open **Instance segmentation**, load ``DEMO_static_mask.tif``, and click **Run selected** to generate instance results in the working copy.
+3. Compare the **Physical** and **Social** views and open **Morphology table** to inspect the calculated measurements.
 4. Open **Visualization**, load ``processed_output/DEMO_static.obj``, fit the view, and rotate the sample. The supplied surface has 6,062 points and 12,104 mesh cells.
 5. Inspect the saved files described in :doc:`outputs`. Continue with your own representative sample once loading and output inspection work.
 
-These counts identify the supplied example. Changing the masks or algorithms can change the results.
+Analysis tables and point clouds are generated when you run the example.
 
 Your first static analysis
 ----------------------------------------------------
@@ -98,6 +98,6 @@ Real-data examples used in the screenshots
 
 The supplied example contains a four-channel HeLa Z stack, separate mitochondrial, lipid-droplet and lysosomal channels, and matching masks and three-dimensional results. It contains no time axis. Mitochondrial data was chosen to show mask editing and organelle geometry; a small crop keeps the instance and network demonstrations easy to inspect.
 
-``demo_data/real_examples/`` includes ``HeLa_mito_ROI.tif``, its existing binary mask and results recalculated by the current backend. Copy this folder to a writable work directory. Load ``HeLa_mito_ROI_mask.tif`` in **Instance segmentation**, inspect **Morphology table**, open its ``processed_output`` in **Network analysis**, or load ``HeLa_mito_ROI_pcd_instance_physical.txt`` in **Visualization**. The crop is 256×256×42, with XY origin (857, 507) in the full image. It uses voxel coordinates; apply the correct spatial calibration when analysing your own experiments.
+``demo_data/real_examples/`` includes ``HeLa_mito_ROI.tif`` and its binary mask. Copy this folder to a writable work directory. Load ``HeLa_mito_ROI_mask.tif`` in **Instance segmentation** and click **Run selected**. Then inspect **Morphology table**, open the generated ``processed_output`` in **Network analysis**, or load ``HeLa_mito_ROI_pcd_instance_physical.txt`` in **Visualization**. The crop is 256×256×42, with XY origin (857, 507) in the full image. It uses voxel coordinates; apply the correct spatial calibration when analysing your own experiments.
 
 ``HeLa_4channel_ROI.tif`` preserves the original intensities of all four channels in the same crop and is used for the preprocessing screenshot. The full four-channel image and mitochondrial stack are not duplicated in the guide. Training windows show configuration only. The supplied model files were not used to produce new predictions for these screenshots. Dynamics continues to use the synthetic DEMO time series.
