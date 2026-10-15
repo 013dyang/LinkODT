@@ -26,17 +26,19 @@ folder and run `LinkODT.exe`. Keep `_internal/` and `UserGuide/` beside it.
 
 ## User guide
 
-Chinese and English guide sources and screenshots are in `使用说明文档/`.
-Build them from the repository root:
+The user guide is available in English and Chinese. Build both versions from
+the repository root using Python 3.11:
 
 ```powershell
-python -m pip install -r "使用说明文档/requirements-docs.txt"
-python -m sphinx -b html "使用说明文档/source" "使用说明文档/html"
-python -m sphinx -b html "使用说明文档/source_en" "使用说明文档/en/html"
+python LinkODT/tools/build_user_guide.py --install-dependencies --open
 ```
 
-Open `使用说明文档/index.html` after building. Small synthetic practice data are
-included in `使用说明文档/demo_data/`. Real microscopy data, model checkpoints,
+This command installs the documentation dependencies, builds both languages,
+and opens the English guide in your browser. On subsequent builds, omit
+`--install-dependencies`. Use the language button in the guide to switch languages.
+The helper locates the guide directory automatically.
+
+Small synthetic practice data are included with the guide. Real microscopy data, model checkpoints,
 Python environments, build outputs and local maintenance records stay outside
 version control. Screenshots in the guide illustrate the real-data workflow;
 the underlying real datasets are supplied separately.
